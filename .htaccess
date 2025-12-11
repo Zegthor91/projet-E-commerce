@@ -1,0 +1,22 @@
+# Active la réécriture d'URL
+RewriteEngine On
+
+# Définit le dossier de base (ajuste selon ton installation)
+RewriteBase /ecommerce/
+
+# Redirige toutes les requêtes vers index.php sauf les fichiers existants
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
+
+# Désactive l'affichage du contenu des dossiers
+Options -Indexes
+
+# Force l'UTF-8
+AddDefaultCharset UTF-8
+
+# Configuration PHP (optionnel)
+php_value upload_max_filesize 10M
+php_value post_max_size 10M
+php_flag display_errors off
+php_flag log_errors on
