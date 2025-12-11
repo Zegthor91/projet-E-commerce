@@ -1,3 +1,6 @@
+**Structure des dossiers / fichiers**
+---
+```
 ecommerce/
 ├── config/
 │   └── database.php
@@ -47,3 +50,4 @@ ecommerce/
 ├── index.php
 ├── .htaccess
 └── README.md
+```
