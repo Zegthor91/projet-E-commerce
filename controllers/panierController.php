@@ -79,3 +79,5 @@ class PanierController {
         redirect(url('panier'));
     }
 }
+
+?>

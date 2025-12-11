@@ -7,7 +7,7 @@ class ProduitController {
         $produitModel = new Produit();
         $categorieModel = new Categorie();
         
-    /* Filtre par catégorie si spécifié*/
+    /* Filtre par catégorie si c'est spécifié*/
         if (isset($_GET['categorie']) && !empty($_GET['categorie'])) {
             $produits = $produitModel->findByCategory($_GET['categorie']);
         } else {
