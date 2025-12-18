@@ -12,10 +12,10 @@ $user = $utilisateurModel->find($_SESSION['user_id']);
 <div class="dashboard">
     <div class="dashboard-card">
         <h2>Mes informations</h2>
-        <p><strong>Nom :</strong> <?= e($user['nom']) ?> <?= e($user['prenom']) ?></p>
-        <p><strong>Email :</strong> <?= e($user['email']) ?></p>
-        <p><strong>Téléphone :</strong> <?= e($user['telephone'] ?? 'Non renseigné') ?></p>
-        <p><strong>Adresse :</strong> <?= nl2br(e($user['adresse'] ?? 'Non renseignée')) ?></p>
+        <p><strong>Nom:</strong> <?= e($user['nom']) ?> <?= e($user['prenom']) ?></p>
+        <p><strong>Email:</strong> <?= e($user['email']) ?></p>
+        <p><strong>Téléphone:</strong> <?= e($user['telephone'] ?? 'Non renseigné') ?></p>
+        <p><strong>Adresse:</strong> <?= nl2br(e($user['adresse'] ?? 'Non renseignée')) ?></p>
     </div>
     <div class="dashboard-card">
         <h2>Mes commandes récentes</h2>

@@ -71,7 +71,6 @@ class PanierController {
         if (!isLoggedIn()) {
             redirect(url('login'));
         }
-        
         $panierModel = new Panier();
         $panierModel->clear($_SESSION['user_id']);
         

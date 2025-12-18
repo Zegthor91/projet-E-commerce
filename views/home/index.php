@@ -14,7 +14,7 @@ include 'views/layout/header.php';
         <?php foreach ($categories as $categorie): ?>
             <a href="<?= url('produits?categorie=' . $categorie['id']) ?>" class="category-card">
                 <h3><?= e($categorie['nom']) ?></h3>
-                <p><?= $categorie['nb_produits'] ?> produit(s)</p>
+                <p><?= $categorie['nb_produits'] ?> produits</p>
             </a>
         <?php endforeach; ?>
     </div>
