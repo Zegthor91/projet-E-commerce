@@ -12,8 +12,8 @@ include 'views/layout/header.php';
                 <?= ucfirst(str_replace('_', ' ', $commande['statut'])) ?>
             </span>
         </p>
-        <p><strong>Adresse de livraison :</strong><br><?= nl2br(e($commande['adresse_livraison'])) ?></p>
-        <p><strong>Total :</strong> <?= formatPrice($commande['total']) ?></p>
+        <p><strong>Adresse de livraison:</strong><br><?= nl2br(e($commande['adresse_livraison'])) ?></p>
+        <p><strong>Total:</strong> <?= formatPrice($commande['total']) ?></p>
     </div>
     <div class="order-items">
         <h2>Produits commandés</h2>
@@ -23,7 +23,7 @@ include 'views/layout/header.php';
                     <th>Produit</th>
                     <th>Prix unitaire</th>
                     <th>Quantité</th>
-                    <th>Sous-total</th>
+                    <th>Sous total</th>
                 </tr>
             </thead>
             <tbody>

@@ -28,7 +28,7 @@ class ProduitController
             exit;
         }
 
-        $id      = (int) $_GET['id'];
+        $id = (int) $_GET['id'];
         $produit = $produitModel->find($id);
 
     /* Gére si le produit n'est pas trouvé */

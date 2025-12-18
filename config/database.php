@@ -2,7 +2,7 @@
 /* Config de la connexion BDD */
 class Database {
     private $host = 'localhost';
-    private $db_name = 'ecommerce_db';
+    private $db = 'ecommerce_db';
     private $username = 'root';
     private $password = '';
     private $conn;
@@ -13,7 +13,7 @@ class Database {
         
         try {
             $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->db_name . ";charset=utf8mb4",
+                "mysql:host=" . $this->host . ";db=" . $this->db . ";charset=utf8mb4",
                 $this->username,
                 $this->password
             );

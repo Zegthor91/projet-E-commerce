@@ -9,7 +9,12 @@ class Model {
         $this->db = $database->getConnection();
     }
 
-/*Récupère les enregistrements*/
+    /* Méthode pour accéder à la connexion depuis l'extérieur */
+    public function getDb() {
+        return $this->db;
+    }
+
+    /*Récupère les enregistrements*/
     public function all() {
         $query = "SELECT * FROM " . $this->table . " ORDER BY id DESC";
         $stmt = $this->db->prepare($query);
@@ -17,7 +22,7 @@ class Model {
         return $stmt->fetchAll();
     }
 
-/*Récupère un enregistrement par ID*/
+    /*Récupère un enregistrement par ID*/
     public function find($id) {
         $query = "SELECT * FROM " . $this->table . " WHERE id = :id LIMIT 1";
         $stmt = $this->db->prepare($query);
@@ -26,7 +31,7 @@ class Model {
         return $stmt->fetch();
     }
 
-/*Supprime un enregistrement*/
+    /*Supprime un enregistrement*/
     public function delete($id) {
         $query = "DELETE FROM " . $this->table . " WHERE id = :id";
         $stmt = $this->db->prepare($query);

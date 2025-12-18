@@ -14,7 +14,7 @@ include 'views/layout/header.php';
             </div>
             
             <div class="form-group">
-                <label for="password">Mot de passe *</label>
+                <label for="password">Mot de passe</label>
                 <input type="password" id="password" name="password" required>
             </div>
             

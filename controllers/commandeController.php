@@ -18,7 +18,8 @@ class CommandeController
             setFlash('error', 'Votre panier est vide');
             redirect(url('panier'));
         }
-    /* Récupère les infos utilisateur */
+        
+        /* Récupère les infos utilisateur */
         $utilisateurModel = new Utilisateur();
         $user = $utilisateurModel->find($userId);
 
@@ -53,9 +54,13 @@ class CommandeController
 
         /* Démarrage de la transaction et création de la commande */
         try {
-            $commandeModel->db->beginTransaction();
+            /* Utilisation de la méthode publique getDb() */
+            $db = $commandeModel->getDb();
+            $db->beginTransaction();
+            
             $commande_id = $commandeModel->create($userId, $total, $adresse);
-        /* Mise à jour des stocks */
+            
+            /* Mise à jour des stocks */
             foreach ($items as $item) {
                 $commandeModel->addLine(
                     $commande_id,
@@ -70,15 +75,15 @@ class CommandeController
             }
 
             $panierModel->clear($userId);
-            $commandeModel->db->commit();
+            $db->commit();
 
             setFlash('success', 'Commande passée avec succès ! Voici le numéro de commande : ' . $commande_id);
             redirect(url('client/dashboard'));
 
         } catch (Exception $e) {
-        /* On vérifie qu'une transaction est en cours */
-            if (method_exists($commandeModel->db, 'inTransaction') && $commandeModel->db->inTransaction()) {
-                $commandeModel->db->rollBack();
+            /* On vérifie qu'une transaction est en cours */
+            if (isset($db) && $db->inTransaction()) {
+                $db->rollBack();
             }
             setFlash('error', 'Erreur lors de la commande : ' . $e->getMessage());
             redirect(url('panier'));
@@ -116,7 +121,7 @@ class CommandeController
         $commandeModel = new Commande();
         $commande = $commandeModel->find($commandeId);
 
-    /* Vérifie si la commande appartient à l'utilisateur */
+        /* Vérifie si la commande appartient à l'utilisateur */
         if (!$commande || (int) $commande['utilisateur_id'] !== $userId) {
             setFlash('error', 'Commande introuvable');
             redirect(url('client/dashboard'));

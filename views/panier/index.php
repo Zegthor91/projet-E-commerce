@@ -18,7 +18,7 @@ include 'views/layout/header.php';
                     <th>Produit</th>
                     <th>Prix unitaire</th>
                     <th>Quantité</th>
-                    <th>Sous-total</th>
+                    <th>Sous total</th>
                     <th>Actions</th>
                 </tr>
             </thead>

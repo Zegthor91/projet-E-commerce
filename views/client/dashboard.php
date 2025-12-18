@@ -26,7 +26,7 @@ $user = $utilisateurModel->find($_SESSION['user_id']);
             <table class="orders-table">
                 <thead>
                     <tr>
-                        <th>N° Commande</th>
+                        <th>Numéro de Commande</th>
                         <th>Date</th>
                         <th>Total</th>
                         <th>Statut</th>
