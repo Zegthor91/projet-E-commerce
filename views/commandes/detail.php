@@ -6,8 +6,8 @@ include 'views/layout/header.php';
 <div class="order-detail">
     <div class="order-info">
         <h2>Informations de la commande</h2>
-        <p><strong>Date :</strong> <?= date('d/m/Y H:i', strtotime($commande['created_at'])) ?></p>
-        <p><strong>Statut :</strong> 
+        <p><strong>Date:</strong> <?= date('d/m/Y H:i', strtotime($commande['created_at'])) ?></p>
+        <p><strong>Statut:</strong> 
             <span class="status status-<?= $commande['statut'] ?>">
                 <?= ucfirst(str_replace('_', ' ', $commande['statut'])) ?>
             </span>
@@ -52,7 +52,7 @@ include 'views/layout/header.php';
         </table>
     </div>
     <div class="back-link">
-        <a href="<?= url('client/dashboard') ?>" class="btn btn-secondary">← Retour à mon espace</a>
+        <a href="<?= url('client/dashboard') ?>" class="btn btn-secondary">Retour à mon espace</a>
         <a href="<?= url('commande/historique') ?>" class="btn btn-secondary">Voir toutes mes commandes</a>
     </div>
 </div>

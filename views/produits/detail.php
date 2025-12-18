@@ -32,7 +32,7 @@ include 'views/layout/header.php';
                 <input type="hidden" name="produit_id" value="<?= $produit['id'] ?>">
                 
                 <div class="quantity-selector">
-                    <label for="quantite">Quantité :</label>
+                    <label for="quantite">Quantité:</label>
                     <input type="number" name="quantite" id="quantite" 
                            value="1" min="1" max="<?= $produit['stock'] ?>">
                 </div>

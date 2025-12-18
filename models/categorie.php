@@ -2,7 +2,6 @@
 
 class Categorie extends Model {
     protected $table = 'categories';
-
 /*Récupère toutes les catégories avec le nombre de produits*/
     public function getAllWithCount() {
         $query = "SELECT c.*, COUNT(p.id) as nb_produits

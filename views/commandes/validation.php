@@ -39,12 +39,12 @@ include 'views/layout/header.php';
         <h2>Informations de livraison</h2>
         <form action="<?= url('commande/process') ?>" method="POST" class="order-form">
             <div class="form-group">
-                <label for="adresse">Adresse de livraison *</label>
+                <label for="adresse">Adresse de livraison</label>
                 <textarea id="adresse" name="adresse" rows="4" required><?= e($user['adresse'] ?? '') ?></textarea>
             </div>
             
             <div class="form-actions">
-                <a href="<?= url('panier') ?>" class="btn btn-secondary">← Retour au panier</a>
+                <a href="<?= url('panier') ?>" class="btn btn-secondary">Retour au panier</a>
                 <button type="submit" class="btn btn-primary btn-large">Confirmer la commande</button>
             </div>
         </form>

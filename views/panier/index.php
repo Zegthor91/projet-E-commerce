@@ -60,7 +60,7 @@ include 'views/layout/header.php';
                 
                 <a href="<?= url('panier/clear') ?>" 
                    class="btn btn-danger"
-                   onclick="return confirm('Êtes-vous sûr de vouloir vider le panier ?')">
+                   onclick="return confirm('Etes-vous certain de vouloir vider votre panier ?')">
                     Vider le panier
                 </a>
                 

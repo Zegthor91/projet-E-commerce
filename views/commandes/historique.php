@@ -5,13 +5,13 @@ include 'views/layout/header.php';
 <h1>Historique de mes commandes</h1>
 
 <?php if (empty($commandes)): ?>
-    <p>Vous n'avez pas encore passé de commande.</p>
+    <p>Vous n'avez pas encore passé de commande</p>
     <a href="<?= url('produits') ?>" class="btn btn-primary">Découvrir nos produits</a>
 <?php else: ?>
     <table class="orders-table">
         <thead>
             <tr>
-                <th>N° Commande</th>
+                <th>Numéro de Commmande</th>
                 <th>Date</th>
                 <th>Total</th>
                 <th>Statut</th>

@@ -4,8 +4,8 @@ include 'views/layout/header.php';
 ?>
 
 <section class="hero">
-    <h1>Bienvenue sur notre boutique en ligne</h1>
-    <p>Découvrez nos produits de qualité à prix imbattables</p>
+    <h1>Bienvenue sur notre boutique E-Commerce</h1>
+    <p>Veuillez découvrir notre catalogue si dessous</p>
 </section>
 
 <section class="categories">

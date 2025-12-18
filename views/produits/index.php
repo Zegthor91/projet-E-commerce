@@ -6,7 +6,7 @@ include 'views/layout/header.php';
 <h1>Liste de nos Produits</h1>
 
 <div class="filters">
-    <h3>Filtrer par catégorie :</h3>
+    <h3>Filtrer les produits par catégorie:</h3>
     <a href="<?= url('produits') ?>" class="filter-btn <?= !isset($_GET['categorie']) ? 'active' : '' ?>">
         Toutes
     </a>  
@@ -20,7 +20,7 @@ include 'views/layout/header.php';
 
 <div class="product-grid">
     <?php if (empty($produits)): ?>
-        <p>Aucun produit disponible dans cette catégorie.</p>
+        <p>Aucun produit disponible dans cette catégorie</p>
     <?php else: ?>
         <?php foreach ($produits as $produit): ?>
             <div class="product-card">
@@ -35,7 +35,7 @@ include 'views/layout/header.php';
                         <?php if ($produit['stock'] > 0): ?>
                             <span class="in-stock">En stock (<?= $produit['stock'] ?>)</span>
                         <?php else: ?>
-                            <span class="out-of-stock">Rupture de stock</span>
+                            <span class="out-of-stock">En rupture de stock</span>
                         <?php endif; ?>
                     </p>
                     
