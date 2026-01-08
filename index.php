@@ -119,3 +119,5 @@ switch ($request) {
         echo "<a href='" . url() . "'>Retour à l'accueil</a>";
         break;
 }
+
+?>
