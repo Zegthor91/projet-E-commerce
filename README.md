@@ -48,6 +48,7 @@ ecommerce/
 │       └── produits/
 │           └── default.jpg
 ├── index.php
+├── database.sql
 ├── .htaccess
 └── README.md
 ```
